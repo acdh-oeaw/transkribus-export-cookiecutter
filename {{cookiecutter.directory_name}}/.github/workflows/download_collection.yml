@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ANT_OPTS: -Xmx5g
-      TR_USER: ${{ secrets.TR_USER }}
-      TR_PW: ${{ secrets.TR_PW}}
+      TR_USER: ${{ "{{" }} secrets.TR_USER {{ "}}" }}
+      TR_PW: ${{ "{{" }} secrets.TR_PW {{ "}}" }}
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v3
