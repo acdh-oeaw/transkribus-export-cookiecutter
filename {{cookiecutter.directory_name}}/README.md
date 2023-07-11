@@ -20,5 +20,5 @@ run `./export_env_variables.sh` to set your Transkribus credentials as environme
 * Create GitHub secrets called `TR_USER` and `TR_PW` and add your Transkribus credentials
 * Go to GitHub Actions and start the workflow -> the exported METS and TEI/XML files will be checked into your repo
 
-
-(created with (transkribus-export-cookiecutter)[https://github.com/acdh-oeaw/transkribus-export-cookiecutter])
+-----
+created with [transkribus-export-cookiecutter](https://github.com/acdh-oeaw/transkribus-export-cookiecutter)
