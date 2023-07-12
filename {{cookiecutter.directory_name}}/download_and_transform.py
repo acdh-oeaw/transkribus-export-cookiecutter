@@ -6,7 +6,7 @@ from transkribus_utils.transkribus_utils import ACDHTranskribusUtils
 
 user = os.environ.get("TR_USER")
 pw = os.environ.get("TR_PW")
-XSLT = "page2tei/page2tei-0.xsl"
+XSLT = "https://csae8092.github.io/page2tei/page2tei-0.xsl"
 METS_DIR = "./mets"
 TEI_DIR = "./tei"
 os.makedirs(METS_DIR, exist_ok=True)
@@ -35,6 +35,8 @@ for y in lines:
         print(f"transforming mets: {x} to {tei_file}")
         with PySaxonProcessor(license=False) as proc:
             xsltproc = proc.new_xslt30_processor()
+            xsltproc.set_parameter("combine", proc.make_boolean_value(True))
+            xsltproc.set_parameter("ab", proc.make_boolean_value(True))
             document = proc.parse_xml(xml_file_name=x)
             executable = xsltproc.compile_stylesheet(stylesheet_file=XSLT)
             output = executable.transform_to_string(xdm_node=document)
