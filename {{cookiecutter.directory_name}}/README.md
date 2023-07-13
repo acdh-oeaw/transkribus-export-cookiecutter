@@ -7,7 +7,6 @@ Automagically export and upconvert data from [Transkribus](https://readcoop.eu/)
 * create a virtual environment `python -m venv venv`
 * update pip to latest version and install needed python packages `pip install -U pip && pip install -r requirements.txt`
 * copy/rename `dummy.env` to `secret.env` and add your Transkribus credentials
-* clone [tei2html-repo](https://github.com/dariok/page2tei) by @dariok `git clone --depth=1 --branch master --single-branch https://github.com/dariok/page2tei.git`
 
 ## export the data
 

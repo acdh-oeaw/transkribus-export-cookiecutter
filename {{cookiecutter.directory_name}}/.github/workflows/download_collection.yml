@@ -18,10 +18,6 @@ jobs:
     - name: Install Python Packages
       run: |
         pip install requirements.txt
-    - name: Clone tei2page
-      run: |
-        git clone --depth=1 --branch master --single-branch https://github.com/dariok/page2tei.git
-    - name: Download and Transform the data
       run: |
         python download_and_transform.py
     - uses: stefanzweifel/git-auto-commit-action@v4
