@@ -13,7 +13,7 @@ Automagically export and upconvert data from [Transkribus](https://readcoop.eu/)
 
 ```json
 {
-    "projcet_name": "Transkribus Export",  // some eyecandy, used only in the created repo's REAMDE.md
+    "project_name": "Transkribus Export",  // some eyecandy, used only in the created repo's REAMDE.md
     "directory_name": "transkribus-out", // the name of the directory cookiecutter will create the export-repo
     "col_id": 1234567 // the id of the/a collection to export, can be changed later any time
 } 
