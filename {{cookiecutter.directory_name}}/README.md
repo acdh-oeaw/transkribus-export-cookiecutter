@@ -11,8 +11,8 @@ Automagically export and upconvert data from [Transkribus](https://readcoop.eu/)
 ## export the data
 
 * add the Transkribus collection IDs to `./col_ids.txt` (each ID on a new line)
-run `./export_env_variables.sh` to set your Transkribus credentials as environment variables.
-* run `python dump_data.py`
+run `source ./secret.env` to set your Transkribus credentials as environment variables.
+* run `python download_and_transform.py`
 
 ## GitHub-Actions
 
