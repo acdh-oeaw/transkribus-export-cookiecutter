@@ -14,11 +14,11 @@ jobs:
       TR_PW: ${{ "{{" }} secrets.TR_PW {{ "}}" }}
     steps:
     - name: Perform Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Install Python Packages
-      run: |
-        pip install -r requirements.txt
-        python download_and_transform.py
+      run: pip install -r requirements.txt
+    - name: download and transform
+      run: python download_and_transform.py
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Export and Transformation done
