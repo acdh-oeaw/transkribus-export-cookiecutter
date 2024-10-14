@@ -1,2 +1,2 @@
 acdh-transkribus-utils
-saxonche==12.1.0
+saxonche>=12.1.0,<13
